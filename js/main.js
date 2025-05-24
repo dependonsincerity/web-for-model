@@ -26,11 +26,13 @@ function openModal(index) {
   currentIndex = index;
   model.style.display = 'flex';
   modelIMG.src = sidePh[index].src;
+  document.body.classList.add("modal-open");
 }
 
 // Закрыть 
 closebutton.onclick = () => {
   model.style.display = 'none';
+  document.body.classList.remove("modal-open");
 };
 
 // Перелистывание
@@ -53,6 +55,7 @@ sidePh.forEach((img, index) => {
 model.addEventListener('click', (e) => {
   if (e.target === model) {
     model.style.display = 'none';
+    document.body.classList.remove("modal-open");
   }
 });
 
