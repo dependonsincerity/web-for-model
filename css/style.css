@@ -1,0 +1,138 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif;                         
+  background: #fdecb68d;  /* Тело(где все лежит) */
+}
+
+.container {
+  max-width: 1500px;
+  margin: 0 auto; 
+  padding: 10px;
+}
+
+header {
+  text-align: center;
+  font-family: serif;                 /* Шапка */
+  font-size: 22px; 
+}
+
+.model-info {
+  max-width: 1350px; 
+  margin: 40px auto 20px auto;
+  padding: 10px 20px;
+  font-size: 20px;                                  /* Параметры */
+  text-align: center;
+  color: #212134;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  line-height: 1.6;
+}
+
+.gallery {
+  display: flex;
+  gap: 40px;                                      
+  padding: 20px;                                      
+  justify-content: flex-start;                        /* Блок фоток - main and side */
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.main-photo {
+  margin-left: 35px; 
+}
+
+.main-photo img {
+  width: 550px;
+  height: 710px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.side-photos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px; 
+  margin-left: 60px; 
+}
+
+.side-photos img {
+  width: 170px; 
+  height: 200px; 
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+                    /* FOR JAVASCRIPT */
+
+#imageModel {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.6); /* полупрозрачный фон */
+  justify-content: center;
+  align-items: center;
+}
+
+.model-content {
+  position: relative;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  max-width: 100%;
+  max-height: 100%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.model-img {
+  width: 100%;
+  height: auto;
+  max-height: 90vh;
+  border-radius: 0;
+  display: block;
+  margin: auto;
+}
+
+.close {
+  position: absolute;
+  top: -30px;
+  right: -20px;
+  font-size: 36px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  padding: 4px 12px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  transform: translateY(-50%);
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+}
+
+.nav.left {
+  left: -60px;
+}
+
+.nav.right {
+  right: -60px;
+}
+
