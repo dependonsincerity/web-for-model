@@ -1,14 +1,57 @@
+              /* Настройка для телефонов(подсказал gpt) */
+
+* {
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .main-photo img {
+    width: 90vw;
+    height: auto;
+    margin-left: 0;
+  }
+
+  .side-photos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-left: 0;
+  }
+
+  .side-photos img {
+    width: 40vw;
+    height: auto;
+  }
+
+  .model-info {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  header {
+    font-size: 18px;
+  }
+}
+
+                          /* Основное оформление сайта */
+
 html, body {
   width: 100%;
-  height: 100%;
+  height: 100%;                       /* Тело(где все лежит) */
   font-family: sans-serif;                         
-  background: #fdecb68d;  /* Тело(где все лежит) */
+  background: #fdecb6;     
 }
 
 .container {
   max-width: 1500px;
   margin: 0 auto; 
   padding: 10px;
+  background-color: #fdecb6;
 }
 
 header {
@@ -18,7 +61,7 @@ header {
 }
 
 .model-info {
-  max-width: 1350px; 
+  max-width: 1300px; 
   margin: 40px auto 20px auto;
   padding: 10px 20px;
   font-size: 20px;                                  /* Параметры */
@@ -56,7 +99,7 @@ header {
   display: grid;
   grid-template-columns: repeat(4, 1fr); 
   gap: 20px; 
-  margin-left: 60px; 
+  margin-left: 50px; 
 }
 
 .side-photos img {
